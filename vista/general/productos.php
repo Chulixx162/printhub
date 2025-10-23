@@ -31,8 +31,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Productos | SIW-TURISMO</title>
-  <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png">
+  <title>Productos | PRINT HUB</title>
+  <link rel="icon" href="../../IMAGENES/LogoPrint_b.png">
   <link href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../../libs/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet">
   <style>
@@ -118,7 +118,7 @@
   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #003366;">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-warning" >SIW-TURISMO</a>
+            <a class="navbar-brand fw-bold text-warning" >Print Hub</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -283,8 +283,8 @@
 
             <!-- Sección: Empresa -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold text-warning">JYS PROMOTORES</h5>
-                <p>Promovemos experiencias turísticas inolvidables en el Huila y más allá. Conecta, viaja y descubre con nosotros.</p>
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">Print Hub</h5>
+                <p>Ofrecemos todo tipo de accesorios para impresoras, además venta de estas mismas.</p>
             </div>
 
             <!-- Sección: Enlaces -->
@@ -297,10 +297,10 @@
             <!-- Sección: Contacto -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="mb-4 fw-bold text-warning">Contacto</h5>
-                <p><i class="fas fa-home me-2"></i> Teruel, Huila, Colombia</p>
-                <p><i class="fas fa-envelope me-2"></i> info@jysturismo.com</p>
+                <p><i class="fas fa-home me-2"></i> Neiva, Huila, Colombia</p>
+                <p><i class="fas fa-envelope me-2"></i> info@printhub.com</p>
                <p>
-                    <a href="https://wa.me/573143144506" target="_blank" class="text-white text-decoration-none">
+                    <a href="https://wa.me/573102366157" target="_blank" class="text-white text-decoration-none">
                         <i class="fas fa-mobile-alt me-2"></i> Escríbenos por WhatsApp <br>
                         Haciendo clic aquí
                     </a>
@@ -311,10 +311,10 @@
             <!-- Sección: Redes sociales -->
             <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-warning">Síguenos</h5>
-                <a href="https://wa.me/573143144506" target="_blank" class=" text-decoration-none btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-whatsapp"></i></a>
-                <!-- <a href="#" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a> -->
-                <a href="https://www.facebook.com/share/1aEM7MnAdN/" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-facebook-f"></i></a>
-                <!-- <a href="#" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-youtube"></i></a> -->
+                <a href="https://wa.me/573102366157" target="_blank" class=" text-decoration-none btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-youtube"></i></a>
             </div>
             </div>
 
@@ -324,7 +324,7 @@
             <!-- Derechos reservados -->
             <div class="row align-items-center">
                 <div class="col-12 col-lg-8">
-                    <p class="text-white"> &copy; <span id="year"></span> JYS PROMOTORES DE VIAJES Y TURISMO. <br> Todos los derechos reservados.</p>
+                    <p class="text-white"> &copy; <span id="year"></span> PRINT HUB. <br> Todos los derechos reservados.</p>
                 </div>
                 
             </div>

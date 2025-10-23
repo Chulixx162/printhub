@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiénes Somos | JYS Promotores</title>
-  <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" />
+  <title>Quiénes Somos | Print Hub</title>
+  <link rel="icon" href="../../IMAGENES/LogoPrint_b.png" />
   <!-- Bootstrap & FontAwesome -->
   <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../libs/fontawesome-free-6.7.2-web/css/all.min.css" />
@@ -28,7 +28,7 @@
 
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../../IMAGENES/playa2.jpg') center/cover no-repeat;
+        url('../../IMAGENES/imgIndex.jpg') center/cover no-repeat;
       height: 60vh;
       display: flex;
       align-items: center;
@@ -182,24 +182,29 @@
     <div style="width: 60px; height: 4px; background-color: #0a9396; margin: 10px auto 30px; border-radius: 4px;"></div>
 
     <p>
-      <strong>JYS Promotores</strong> es una agencia de turismo comprometida con ofrecer experiencias de viaje
-      auténticas, seguras y transformadoras. Con más de <strong>19 años</strong> en el sector, nos hemos ganado la
-      confianza de cientos de viajeros que han recorrido Colombia y el mundo con nosotros.
+      En Print Hub, somos más que una empresa de impresión; somos tu socio confiable en soluciones de impresión
+      innovadoras y de alta calidad. Fundada con la visión de transformar la experiencia de impresión, nos
+      dedicamos a ofrecer servicios excepcionales que combinan tecnología avanzada con un compromiso inquebrantable
+      con la satisfacción del cliente.
     </p>
     <p>
-      Somos un equipo apasionado por el turismo, la cultura y la conexión humana. Diseñamos cada plan de viaje con
-      detalle, desde la logística hasta las emociones que deseas vivir. Cada viaje es una historia que ayudamos a escribir.
+      Nuestra pasión por la impresión nos impulsa a ofrecer soluciones personalizadas y asequibles que
+      adaptan a tus necesidades y presupuesto. Desde la selección de impresoras y componentes hasta la
+      configuración y mantenimiento, nos enorgullece ser tu socio confiable en todo lo relacionado con la
+      impresión.
     </p>
     <p>
-      Ya sea una escapada romántica, una aventura familiar o una ruta exótica, <strong>estamos aquí para crearlo contigo</strong>.
+      En Print Hub, creemos en la innovación constante y en la mejora continua. Nuestro equipo de expertos
+      está siempre a la vanguardia de las últimas tendencias y tecnologías en el mundo de la impresión,
+      asegurando que nuestros clientes reciban soluciones modernas y eficientes.
     </p>
     <p class="quote">
-      “No vendemos pasajes, creamos recuerdos.”
+      "En Print Hub, tu visión se convierte en impresión de calidad."
     </p>
 
     <!-- Imagen de la empresa mejor presentada -->
     <div class="company-image-container">
-      <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png"
+      <img src="../../IMAGENES/logo_printhub.png"
         alt="Imagen de la empresa"
         class="company-image img-fluid">
     </div>
@@ -211,24 +216,24 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
-          <h5>JYS Promotores</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i>Teruel, Huila - Colombia</p>
-          <p><i class="fas fa-envelope me-2"></i>contacto@jysviajes.com</p>
-          <p><i class="fas fa-phone me-2"></i>+57 314 314 4506</p>
+          <h5>PRINT HUB</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i>NEIVA, Huila - Colombia</p>
+          <p><i class="fas fa-envelope me-2"></i>contacto@printhub.com</p>
+          <p><i class="fas fa-phone me-2"></i>+57 310 236 6157</p>
         </div>
 
 
         <div class="col-md-4 mb-4">
           <h5>Síguenos</h5>
           <div class="social-icons">
-            <a href="https://wa.me/573143144506" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/share/1aEM7MnAdN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/573102366157" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        &copy; <span id="year"></span> JYS Promotores de Viajes y Turismo. <br>Todos los derechos reservados.
+        &copy; <span id="year"></span> Print Hub. <br>Todos los derechos reservados.
       </div>
     </div>
   </footer>

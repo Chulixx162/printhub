@@ -10,7 +10,7 @@ if (!isset($_SESSION['id_cliente'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JYS Promotores de Viajes y Turismo - RNT: 125482</title>
+    <title>Print Hub</title>
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css">
@@ -19,7 +19,7 @@ if (!isset($_SESSION['id_cliente'])) {
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png">
+    <link rel="icon" href="../../IMAGENES/LogoPrint_b.png">
     
     <style>
         :root {
@@ -272,7 +272,7 @@ if (!isset($_SESSION['id_cliente'])) {
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand">
-                <i class="fas fa-bus"></i> JYS PROMOTORES
+                <i class="fas fa-print"></i> PRINT HUB
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -302,12 +302,12 @@ if (!isset($_SESSION['id_cliente'])) {
                 <div class="col-lg-8 mx-auto fade-in-up">
                     <!-- Logo centrado -->
                     <div class="text-center mb-4">
-                        <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" alt="JYS Promotores de Viajes y Turismo" class="hero-logo logo-float">
+                        <img src="../../IMAGENES/logo_printhub.png" alt="JYS Promotores de Viajes y Turismo" class="hero-logo logo-float">
                     </div>
                     
-                    <h1>Descubre el Mundo con JYS</h1>
-                    <p class="lead">Promotores de Viajes y Turismo - RNT: 125482</p>
-                    <p>Creamos experiencias únicas e inolvidables. Tu próxima aventura comienza aquí.</p>
+                    <h1> Bienvenido a <strong>PRINTHUB</strong></h1>
+                    <p class="lead"> En <strong>PRINTHUB</strong> encontrarás todo lo que necesitas para tu impresora, desde estas mismas, hasta accesorios y componentes de alta calidad.</p>
+                    <p> Estamos orgullosos de tenerte aquí.</p>
                     <div class="mt-4">
                         <a href="productos.php" class="btn-custom">Productos</a>
                         <a class="btn-outline-custom" onclick="salir(); ">Cerrar Sesión</a>

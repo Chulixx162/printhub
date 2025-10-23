@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contáctanos | JYS Promotores</title>
-  <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" />
+  <title>Contáctanos | Print Hub</title>
+  <link rel="icon" href="../../IMAGENES/LogoPrint_b.png" />
 
   <!-- Bootstrap & FontAwesome -->
   <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
@@ -20,7 +20,7 @@
 
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('../../IMAGENES/playa2.jpg') center/cover no-repeat;
+        url('../../IMAGENES/imgIndex.jpg') center/cover no-repeat;
       height: 45vh;
       display: flex;
       align-items: center;
@@ -139,7 +139,7 @@
 
   <!-- Logo -->
   <div class="logo-container">
-    <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" alt="Logo JYS" />
+    <img src="../../IMAGENES/logo_printhub.png" alt="Logo JYS" />
   </div>
 
   <!-- Contenido principal -->
@@ -177,11 +177,11 @@
       <div class="col-lg-6">
         <div class="info-card">
           <h5 class="mb-4 text-center">Información de contacto</h5>
-          <p><i class="fas fa-map-marker-alt"></i> Teruel, Huila - Colombia</p>
-          <p><i class="fas fa-envelope"></i> contacto@jysviajes.com</p>
-          <p><i class="fas fa-phone"></i> +57 314 314 4506</p>
+          <p><i class="fas fa-map-marker-alt"></i> Neiva, Huila - Colombia</p>
+          <p><i class="fas fa-envelope"></i> contacto@printhub.com</p>
+          <p><i class="fas fa-phone"></i> +57 310 236 6157</p>
           <div class="map-responsive mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15902.507462969106!2d-75.58234426659398!3d2.195792836457243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e246ce408a8cb27%3A0x6c4c5158d229a7b9!2sTeruel%2C%20Huila!5e0!3m2!1ses!2sco!4v1712953951950!5m2!1ses!2sco" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63753.20144884383!2d-75.31358848192264!3d2.937704362344146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b747c5a6b4009%3A0x69acf162bb25539a!2sNeiva%2C%20Huila!5e0!3m2!1ses-419!2sco!4v1761226864415!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
