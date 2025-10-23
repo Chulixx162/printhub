@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Ingresar - JYS</title>
+	<title>Ingresar - Print Hub</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -37,8 +37,8 @@
 		/* ---------------- NAVBAR ---------------- */
 		/* Solid blue navbar without transparency */
 		.dashboard-Navbar {
-			background: #1e3a8a;
-			color: white;
+			background: #ffffffff;
+			color: black;
 			padding: 16px 20px;
 			position: fixed;
 			top: 0;
@@ -64,7 +64,7 @@
 			font-size: clamp(16px, 3.5vw, 24px);
 			font-weight: 600;
 			letter-spacing: 0.5px;
-			color: #ffffff;
+			color: #000000ff;
 			margin: 0;
 		}
 
@@ -248,8 +248,8 @@
 	<section class="ashboard-contentPage">
 		<nav class="dashboard-Navbar">
 			<div class="dashboard-sideBar-title d-flex align-items-center">
-				<img src="../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" alt="Logo">
-				<h1>JYS PROMOTORES DE VIAJES Y TURISMO</h1>
+				<img src="../IMAGENES/logo_printhub.png" alt="Logo">
+				<h1>PRINT HUB</h1>
 			</div>
 		</nav>
 	</section>

@@ -161,7 +161,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #0077a6;
+            background-color: #686f71ff;
             /* Color azul de tu página */
             color: white;
             padding: 10px 12px;
@@ -175,7 +175,7 @@
 
         .scroll-to-top:hover {
             transform: scale(1.2);
-            background-color: #005f80;
+            background-color: #343b3dff;
             /* Un tono más oscuro al pasar el mouse */
         }
     </style>

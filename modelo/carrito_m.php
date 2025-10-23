@@ -94,7 +94,7 @@ function finalizar()
     $tipo_venta = "online";
 
     // Ruta accesible desde navegador
-    $logoPath = '../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png';
+    $logoPath = '';
 
     // Guardar venta en la base de datos primero para obtener ID
     $stmt = $conn->prepare("INSERT INTO ventas (tipo_venta, fecha, total, id_cliente, estado, detalles) VALUES (?, ?, ?, ?, ?, ?)");
@@ -127,10 +127,10 @@ function finalizar()
     </head>
     <body>
         <div style="text-align: center;">
-            <img src="' . $logoPath . '" class="logo" alt="JYS PROMOTORES DE VIAJES Y TURISMO">
+            <img src="' . $logoPath . '" class="logo" alt="PRINTHUB>
         </div>
 
-        <h1>Resumen: SOLICITUD DE COMPRA N° ' . $id_venta . '<br>JYS PROMOTORES DE VIAJES Y TURISMO <br> RNT: 125482</h1>
+        <h1>Resumen: SOLICITUD DE COMPRA N° ' . $id_venta . '<br>PRINT<br>HUB</h1>
         <h2>Fecha: ' . $fecha . '</h2>
         <h2>Tipo de Venta: ' . $tipo_venta . '</h2>
 
@@ -169,10 +169,10 @@ function finalizar()
 
         <div class="footer">
             <hr>
-            <p><strong>JYS PROMOTORES DE VIAJES Y TURISMO</strong><br>
-            Teruel - Huila, Colombia<br>
-            +57 314 314 4506<br>
-            samyraga1979@gmail.com</p>
+            <p><strong>PRINT HUB</strong><br>
+            Neiva - Huila, Colombia<br>
+            +57 310 236 6157<br>
+            printhub@gmail.com</p>
         </div>
     </body>
     </html>';
@@ -196,7 +196,7 @@ function finalizar()
     unset($_SESSION['carrito']);
 
     // WhatsApp
-    $numero = "573143144506";
+    $numero = "573102366157";
     $mensaje = "Hola, acabo de finalizar una solicitud de compra. Solicitud N° $id_venta. Total: $" . number_format($totalFinal, 0, ',', '.') . ". Por favor revisar el resumen para continuar con el proceso de compra.";
     $urlWhatsapp = "https://api.whatsapp.com/send?phone=$numero&text=" . urlencode($mensaje);
 
@@ -206,7 +206,7 @@ function finalizar()
         <script>
             const link = document.createElement('a');
             link.href = '$pdfPath';
-            link.download = 'SOLICITUD_COMPRA_JYS_N°$id_venta.pdf';
+            link.download = 'SOLICITUD_COMPRA_PRINT_N°$id_venta.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

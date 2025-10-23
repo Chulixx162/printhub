@@ -35,8 +35,8 @@ $compras->data_seek(0); // Reset result pointer para usar en tabla
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - JYS</title>
-    <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png">
+    <title>Perfil - PRINT HUB</title>
+    <link rel="icon" href="../../IMAGENES/LogoPrint_b.png">
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../libs/fontawesome-free-6.7.2-web/css/all.min.css">
     <style>
