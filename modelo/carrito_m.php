@@ -127,7 +127,7 @@ function finalizar()
     </head>
     <body>
         <div style="text-align: center;">
-            <img src="' . $logoPath . '" class="logo" alt="PRINTHUB>
+            <img src="' . $logoPath . '" class="logo" alt="PRINTHUB">
         </div>
 
         <h1>Resumen: SOLICITUD DE COMPRA N° ' . $id_venta . '<br>PRINT<br>HUB</h1>
