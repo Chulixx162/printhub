@@ -56,7 +56,7 @@
       
     </form>
       <div class="d-grid mt-2">
-        <a class="btn linea" href="../login.php"><button class="btn " ><i class="fas fa-chess-pawn me-2"></i>Ingresar como Cliente</button></a>
+        <a class="btn linea" href="../login"><button class="btn " ><i class="fas fa-chess-pawn me-2"></i>Ingresar como Cliente</button></a>
       </div>
   </div>
 </body>
