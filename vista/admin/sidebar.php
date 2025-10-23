@@ -7,29 +7,60 @@ $CampanaPedidosFisicos=hayPedidosFisicos($conn);
 $campanaAbonos = hayAbonosPendientes($conn);
 ?>
 
+ <style>
+    .sidebar {
+        /* Degradado más oscuro para que resalte mejor el logo blanco */
+       background: linear-gradient(45deg, #00AEEF 0%, #153E75 100%);
+        min-height: 100vh;
+    }
 
+    .sidebar img {
+        /* Aumentamos el brillo y el contraste del logo */
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)) brightness(1.1) contrast(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar img:hover {
+        transform: scale(1.05);
+    }
+
+    .nav-link {
+        border-radius: 8px;
+        margin-bottom: 4px;
+    }
+      .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    /* Mejora para el título */
+    h4 {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        font-weight: 600;
+    }
+ </style>
 
     <div class="sidebar p-3 text-center d-flex flex-column flex-shrink-0 text-white overflow-auto">
         <!-- Sidebar -->
-        <nav style="min-width: 250px;">
+        <nav style="min-width: 250px ;">
             <!-- Logo -->
-            <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" alt="Logo SIW-TURISMO"
+            <img src="../../IMAGENES/logo_printhub.png" alt="Logo"
                 class="img-fluid mb-3 mx-auto d-block" style="max-height: 80px;" />
 
             <!-- Título -->
-            <h4 class="mb-4">SIW-TURISMO</h4>
+            <h4 class="mb-4">PRINT HUB</h4>
 
             <!-- Menú navegación -->
             <ul class="nav nav-pills flex-column text-start">
                 <li class="nav-item">
                     <a href="vista_general.php" class="nav-link i-vista_general text-white">
-                        <i class="fas fa-chart-line me-2"></i>ADMINISTRAR
+                        <i class="fas fa-chart-line me-2"></i>Administrar
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="productos.php" class="nav-link i-productos text-white">
-                        <i class="fas fa-suitcase-rolling me-2"></i>PRODUCTOS
+                        <i class="fas fa-boxes me-2"></i>Productos
                     </a>
                 </li>
 
@@ -55,11 +86,7 @@ $campanaAbonos = hayAbonosPendientes($conn);
                         <i class="fas fa-id-card me-2"></i>Clientes
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="circulo_viajero.php" class="nav-link i-circulo_viajero text-white">
-                        <i class="fas fa-globe me-2"></i>Círculo Viajero
-                    </a>
-                </li>
+               
                 <?php if ($_SESSION['rol'] == 'ADMIN' || $_SESSION['rol'] == 'ATENCION_CLIENTE'): ?>
                     <li class="nav-item">
                         <a href="atencion_cliente.php" class="nav-link i-atencion_cliente text-white">
@@ -108,7 +135,7 @@ $campanaAbonos = hayAbonosPendientes($conn);
                 <?php endif; ?>
                 <li class="nav-item">
                     <a href="categorias.php" class="nav-link i-categorias text-white">
-                        <i class="fas fa-car me-2"></i>Categorías
+                        <i class="fas fa-print me-2"></i>Categorías
                         
                     </a>
                 </li>

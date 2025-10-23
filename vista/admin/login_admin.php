@@ -6,90 +6,44 @@
   <title>Login Administrador</title>
   <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../libs/fontawesome-free-6.7.2-web/css/all.min.css">
-  <link rel="icon" href="../../IMAGENES/Logo Printhub.png">
+  <link rel="icon" href="../../IMAGENES/logo_printhub.png">
   <style>
-    :root{
-      --primary-dark: #153E75;
-      --primary-cyan: #00AEEF;
-      --gray-medium: #6C757D;
-      --gray-light: #E9ECEF;
-      --accent-magenta: #EC008C;
-      --accent-yellow: #FFD100;
-      --black: #231F20;
-    }
-
     body {
-      background: linear-gradient(to right, var(--primary-dark), var(--primary-cyan));
+      background: linear-gradient(to right,rgb(7, 55, 79), #0077b6);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
 
     .login-card {
-      background-color: #ffffff;
+      background-color: white;
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-      max-width: 420px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
       width: 100%;
-      border: 1px solid var(--gray-light);
     }
-
-    .login-card img { filter: none; }
-
-    label { color: var(--black); font-weight: 600; }
-
-    .form-control:focus {
-      border-color: var(--primary-cyan);
-      box-shadow: 0 0 0 0.15rem rgba(0,174,239,0.12);
-    }
-
-    .btn-printhub {
-      background: var(--primary-dark);
-      color: #fff;
-      border: none;
-      transition: background .15s ease;
-    }
-    .btn-printhub:hover, .btn-printhub:focus {
-      background: var(--primary-cyan);
-      color: #fff;
-    }
-
     .linea{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .5rem;
-      padding: .5rem .75rem;
-      border: 2px solid var(--accent-yellow);
-      color: var(--black);
-      border-radius: 0.75rem;
-      background: transparent;
-      text-decoration: none;
-      transition: background .15s ease, color .15s ease;
+      border: 2px solid #f77f00;
     }
     .linea:hover{
-      background-color: var(--accent-yellow);
-      color: #000;
-      text-decoration: none;
+      border-radius: 1rem;
+      background-color: #f77f00;
     }
-
-    .small-muted { color: var(--gray-medium); font-size: .9rem; }
   </style>
 </head>
 <body>
   <div class="login-card">
     <div class="text-center mb-4">
-      <img src="../../IMAGENES/Logo Printhub.png" width="100" alt="Logo">
-      <h4 class="mt-2" style="color:var(--primary-dark)">Ingreso Administrador</h4>
+      <img src="../../IMAGENES/logo_printhub.png" width="120" alt="Logo">
+      <h4 class="mt-2">Ingreso Administrador</h4>
     </div>
 
-    <form action="../../controlador/usuarios_c.php?accion=ingresar" method="POST" novalidate>
+    <form action="../../controlador/usuarios_c.php?accion=ingresar" method="POST">
       <div class="mb-3">
         <label for="correo" class="form-label"><i class="fas fa-user me-2"></i>Correo electrónico</label>
-        <input type="email" name="correo" id="correo" class="form-control" required autofocus>
+        <input type="email" name="correo" id="correo" class="form-control" required>
       </div>
       <div class="mb-3">
         <label for="clave" class="form-label"><i class="fas fa-lock me-2"></i>Contraseña</label>
@@ -97,12 +51,12 @@
       </div>
       <hr>
       <div class="d-grid">
-        <button type="submit" class="btn btn-printhub"><i class="fas fa-sign-in-alt me-2"></i>Ingresar</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt me-2"></i>Ingresar</button>
       </div>
       
     </form>
       <div class="d-grid mt-2">
-        <a class="linea" href="../login.php"><i class="fas fa-chess-pawn me-2"></i>Ingresar como Cliente</a>
+        <a class="btn linea" href="../login.php"><button class="btn " ><i class="fas fa-chess-pawn me-2"></i>Ingresar como Cliente</button></a>
       </div>
   </div>
 </body>
