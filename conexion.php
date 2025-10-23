@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'bd_siw_turismo';
+$dbname = 'bd_print_hub';
 $username = 'root';
 $password = '';
 $conn = mysqli_connect($host, $username, $password, $dbname);
