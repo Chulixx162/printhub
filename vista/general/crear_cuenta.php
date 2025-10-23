@@ -1,8 +1,3 @@
-<?php
-// include '../../conexion.php';
-// include '../../modelo/clientes_m.php';
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -78,7 +73,7 @@
     <div class="register-box mt-5 mb-5">
         <!-- <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png" alt="Logo JYS" class="logo"> -->
         <h2><i class="bi bi-person-plus-fill"></i> Crear Cuenta</h2>
-        <form action="../../controlador/clientes_c.php?accion=registrar" method="POST" autocomplete="on">
+        <form action="../../controlador/cliente?accion=registrar" method="POST" autocomplete="on">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre completo:</label>
                 <div class="input-group">
@@ -149,7 +144,7 @@
                 </button>
             </div>
             <div class="mt-3 text-center">
-                <a href="../login.php" class="text-decoration-none" style="color: #017C86;">
+                <a href="../login" class="text-decoration-none" style="color: #017C86;">
                     <i class="bi bi-box-arrow-in-right"></i> ¿Ya tienes cuenta? - Inicia sesión
                 </a>
             </div>

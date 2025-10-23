@@ -25,10 +25,9 @@
             <div class="col-md-4 mb-4">
               <h5 class="fw-bold">Enlaces rápidos</h5>
               <ul class="list-unstyled">
-                <li><a href="PaginaPrincipal.php" class="text-light text-decoration-none">Inicio</a></li>
-                <li><a href="productos.php" class="text-light text-decoration-none">Productos</a></li>
-                <li><a href="quienes_somos.php" class="text-light text-decoration-none">Quiénes somos</a></li>
-                <!-- <li><a href="http://localhost/SIW-TURISMO/vista/general/contactanos.php" class="text-light text-decoration-none">Contáctanos</a></li> -->
+                <li><a href="PaginaPrincipal" class="text-light text-decoration-none">Inicio</a></li>
+                <li><a href="productos" class="text-light text-decoration-none">Productos</a></li>
+                <li><a href="quienes_somos" class="text-light text-decoration-none">Quiénes somos</a></li>
               </ul>
             </div>
     

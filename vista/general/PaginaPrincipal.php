@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['id_cliente'])) {
-    header("Location: ../login.php");
+    header("Location: ../login");
     exit();
 }
 ?>
@@ -280,12 +280,12 @@ if (!isset($_SESSION['id_cliente'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" id="iconInicio" href="PaginaPrincipal.php">
+                      <a class="nav-link" id="iconInicio" href="PaginaPrincipal">
                         <i class="fas fa-home"></i> Inicio
                       </a>
                     </li>
                     <li>
-                        <a href="perfil.php" class="nav-link">
+                        <a href="perfil" class="nav-link">
                             <i class="fas fa-user"></i> Perfil
                         </a>
                     </li>
@@ -309,7 +309,7 @@ if (!isset($_SESSION['id_cliente'])) {
                     <p class="lead"> En <strong>PRINTHUB</strong> encontrarás todo lo que necesitas para tu impresora, desde estas mismas, hasta accesorios y componentes de alta calidad.</p>
                     <p> Estamos orgullosos de tenerte aquí.</p>
                     <div class="mt-4">
-                        <a href="productos.php" class="btn-custom">Productos</a>
+                        <a href="productos" class="btn-custom">Productos</a>
                         <a class="btn-outline-custom" onclick="salir(); ">Cerrar Sesión</a>
                     </div>
                 </div>
