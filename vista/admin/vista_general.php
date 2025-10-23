@@ -71,7 +71,7 @@
                 <!-- Cards resumen -->
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <a href="clientes.php">
+                        <a href="clientes">
                         <div class="card shadow border-0">
                             <div class="card-body text-center">
                                 <i class="fas fa-users fa-2x text-primary"></i>
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="productos.php">
+                        <a href="productos">
                         <div class="card shadow border-0">
                             <div class="card-body text-center">
                                 <i class="fas fa-suitcase fa-2x text-success"></i>
@@ -95,7 +95,7 @@
                     </div>
                     <?php if ($_SESSION['rol'] == 'ADMIN'): ?>
                         <div class="col-md-4">
-                            <a href="usuarios.php">
+                            <a href="usuarios">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center">
                                     <i class="fas fa-users-cog fa-2x text-warning"></i>

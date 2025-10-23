@@ -160,7 +160,7 @@
             </div>
             <div class="mb-3">
               <label for="telefono" class="form-label">Teléfono</label>
-              <input type="tel" name="telefono" class="form-control" id="telefono" required />
+              <input type="number" name="telefono" class="form-control" id="telefono" required />
             </div>
             <div class="mb-3">
               <label for="mensaje" class="form-label">Mensaje</label>

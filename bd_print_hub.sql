@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2025 a las 23:03:25
+-- Tiempo de generación: 23-10-2025 a las 18:02:22
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_siw_turismo`
+-- Base de datos: `bd_print_hub`
 --
 
 -- --------------------------------------------------------
@@ -55,6 +55,13 @@ CREATE TABLE `atencion_clientes` (
   `telefono` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `atencion_clientes`
+--
+
+INSERT INTO `atencion_clientes` (`id`, `nombre`, `mensaje`, `fecha`, `estado`, `correo`, `telefono`) VALUES
+(1, 'Julio Andrés Casanova Ramírez', 'Hola, buenos días.\r\nEstoy interesado en más información acerca de sus productos', '2025-10-23 15:28:27', 'PE', 'julioacr8@gmail.com', 3102366157);
+
 -- --------------------------------------------------------
 
 --
@@ -66,6 +73,14 @@ CREATE TABLE `categorias` (
   `nombre` text NOT NULL,
   `descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`, `descripcion`) VALUES
+(1, 'Tintas', 'En esta categoría podrás encontrar cualquier variedad de tientas para tus impresoras, siempre de la mejor calidad'),
+(2, 'Cartuchos de Tinta', 'Tenemos gran variedad de cartuchos de tinta, de todos los precios y marca');
 
 -- --------------------------------------------------------
 
@@ -87,6 +102,13 @@ CREATE TABLE `clientes` (
   `direccion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `tipo_documento`, `numero_documento`, `fecha_registro`, `fecha_nacimiento`, `correo`, `contacto_1`, `contacto_2`, `clave`, `direccion`) VALUES
+(1, 'Julio Andrés Casanova Ramírez', 'CC', 1075252762, '2025-10-23 13:50:22', '2025-05-01', 'julioacr8@gmail.com', '3102366155', '0', '$2y$10$nnduMikWxtKqrTR/2b5uUu9WocmdijkD.wGUbcI3GPr6hokaFcL4.', 'Teruel, Cra 3e #5-13');
+
 -- --------------------------------------------------------
 
 --
@@ -101,6 +123,14 @@ CREATE TABLE `productos` (
   `descripcion` text NOT NULL,
   `precio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `id_categoria`, `nombre`, `imagen`, `descripcion`, `precio`) VALUES
+(1, 1, 'Tinta para Impresora HP', '68fa5003ae253-D_NQ_NP_852694-MLU78443162654_082024-O.webp', 'Paquete de tintas, incluye las tintas que requiere la impresora, además cuenta con 4 paquetes adicionales a un menor precio', 50000),
+(2, 2, 'Cartuchos de Tinta para HP', '68fa504543a48-imgIndex.webp', 'Par de cartuchos para tu impresora. Súper económicos, además de buena marca', 20000);
 
 -- --------------------------------------------------------
 
@@ -123,7 +153,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `rol`, `contacto_1`, `contacto_2`, `clave`) VALUES
-(1, 'ADMIN', 'samyraga1979@gmail.com', 'ADMIN', '3143144506', NULL, '$2y$10$Y2AUNB3DDni24DjOruMadOMfrpGceLcp8FDZh4ejo7RhQl4OPOAc2');
+(1, 'ADMIN', 'julioacr8@gmail.com', 'ADMIN', '3102366157', NULL, '$2y$10$EoJVifmbmdv387qP2BPah.bZ773wAfEaNTCpbbQqWvYHdyMwenNKm');
 
 -- --------------------------------------------------------
 
@@ -144,23 +174,13 @@ CREATE TABLE `ventas` (
   `detalles` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `viajeros`
+-- Volcado de datos para la tabla `ventas`
 --
 
-CREATE TABLE `viajeros` (
-  `id` int(11) NOT NULL,
-  `nombre` text NOT NULL,
-  `tipo_de_documento` enum('CC','TI','RC','PASAPORTE','CE') NOT NULL,
-  `numero_de_documento` int(11) DEFAULT NULL,
-  `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `fecha_nacimiento` date DEFAULT NULL,
-  `contacto_1` varchar(15) DEFAULT NULL,
-  `contacto_2` varchar(15) DEFAULT NULL,
-  `direccion` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `ventas` (`id`, `tipo_venta`, `fecha`, `total`, `id_cliente`, `nombre_cliente`, `telefono`, `direccion`, `estado`, `detalles`) VALUES
+(1, 'fisica', '2025-10-23 15:58:02', 120000, NULL, 'Julio Andrés Casanova', 3102366157, 'Teruel, Cra 3e #5-13', 'atendido', 'Tinta para Impresora HP (x2) - $100.000, Cartuchos de Tinta para HP (x1) - $20.000'),
+(2, 'online', '2025-10-23 15:59:08', 170000, 1, NULL, NULL, NULL, 'solicitado', 'Tinta para Impresora HP (x3) - $150.000\n Cartuchos de Tinta para HP (x1) - $20.000\n ');
 
 --
 -- Índices para tablas volcadas
@@ -215,12 +235,6 @@ ALTER TABLE `ventas`
   ADD KEY `id_usuario` (`id_cliente`);
 
 --
--- Indices de la tabla `viajeros`
---
-ALTER TABLE `viajeros`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -234,25 +248,25 @@ ALTER TABLE `abonos`
 -- AUTO_INCREMENT de la tabla `atencion_clientes`
 --
 ALTER TABLE `atencion_clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -264,13 +278,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `viajeros`
---
-ALTER TABLE `viajeros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
