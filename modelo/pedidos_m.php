@@ -46,7 +46,7 @@
             exit();
         } else {
             // Redirección de respaldo si no hay REFERER
-            header("Location: ../vista/admin/pedidos.php");
+            header("Location: ../vista/admin/pedidos");
             exit();
         }
 
@@ -54,6 +54,6 @@
     
     function borrar($conn, $id) {
     mysqli_query($conn, "DELETE FROM ventas WHERE ventas . id=$id");
-    header("Location: ../vista/admin/pedidos.php");
+    header("Location: ../vista/admin/pedidos");
     }
 ?>

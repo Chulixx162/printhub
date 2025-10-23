@@ -53,43 +53,32 @@ $campanaAbonos = hayAbonosPendientes($conn);
             <!-- Menú navegación -->
             <ul class="nav nav-pills flex-column text-start">
                 <li class="nav-item">
-                    <a href="vista_general.php" class="nav-link i-vista_general text-white">
+                    <a href="vista_general" class="nav-link i-vista_general text-white">
                         <i class="fas fa-chart-line me-2"></i>Administrar
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="productos.php" class="nav-link i-productos text-white">
+                    <a href="productos" class="nav-link i-productos text-white">
                         <i class="fas fa-boxes me-2"></i>Productos
                     </a>
                 </li>
-
-                <!-- <li class="nav-item">
-                    <a href="planes.php" class="nav-link i-planes text-white">
-                        <i class="fas fa-user me-2"></i>Planes Individuales
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="tours.php" class="nav-link i-tours text-white">
-                        <i class="fas fa-map-marked-alt me-2"></i>Tours
-                    </a>
-                </li> -->
                 <?php if ($_SESSION['rol'] == 'ADMIN'): ?>
                     <li class="nav-item">
-                        <a href="usuarios.php" class="nav-link i-usuarios text-white">
+                        <a href="usuarios" class="nav-link i-usuarios text-white">
                             <i class="fas fa-users-cog me-2"></i>Usuarios
                         </a>
                     </li>
                 <?php endif; ?>
                 <li class="nav-item">
-                    <a href="clientes.php" class="nav-link i-clientes text-white">
+                    <a href="clientes" class="nav-link i-clientes text-white">
                         <i class="fas fa-id-card me-2"></i>Clientes
                     </a>
                 </li>
                
                 <?php if ($_SESSION['rol'] == 'ADMIN' || $_SESSION['rol'] == 'ATENCION_CLIENTE'): ?>
                     <li class="nav-item">
-                        <a href="atencion_cliente.php" class="nav-link i-atencion_cliente text-white">
+                        <a href="atencion_cliente" class="nav-link i-atencion_cliente text-white">
                             <i class="fas fa-comments me-2"></i>Atención al Cliente
                             <?php if ($CampanaAtencion): ?>
                                 <i class="fas fa-bell text-warning ms-2"></i> <!-- Campana -->
@@ -99,12 +88,12 @@ $campanaAbonos = hayAbonosPendientes($conn);
                 <?php endif; ?>
                 
                 <li class="nav-item">
-                    <a href="venta_tienda.php" class="nav-link i-venta_tienda text-white">
+                    <a href="venta_tienda" class="nav-link i-venta_tienda text-white">
                         <i class="fas fa-cash-register me-2"></i>Ventas en Tienda
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pedidos.php" class="nav-link i-pedidos text-white">
+                    <a href="pedidos" class="nav-link i-pedidos text-white">
                         <i class="fas fa-file-invoice-dollar me-2"></i>
                         Pedidos Online
 
@@ -114,7 +103,7 @@ $campanaAbonos = hayAbonosPendientes($conn);
                     </a>
                 </li>
                  <li class="nav-item">
-                    <a href="pedidos_tienda.php" class="nav-link i-pedidos_tienda text-white">
+                    <a href="pedidos_tienda" class="nav-link i-pedidos_tienda text-white">
                         <i class="fas fa-store me-2"></i>
                         Pedidos en Tienda
 
@@ -125,7 +114,7 @@ $campanaAbonos = hayAbonosPendientes($conn);
                 </li>
                 <?php if ($_SESSION['rol'] != 'ATENCION_CLIENTE'): ?>
                     <li class="nav-item">
-                        <a href="abonos.php" class="nav-link i-abonos text-white">
+                        <a href="abonos" class="nav-link i-abonos text-white">
                             <i class="fas fa-hand-holding-usd me-2"></i>Abonos
                             <?php if ($campanaAbonos): ?>
                             <i class="fas fa-bell text-warning ms-2"></i> <!-- Campana -->
@@ -134,7 +123,7 @@ $campanaAbonos = hayAbonosPendientes($conn);
                     </li>
                 <?php endif; ?>
                 <li class="nav-item">
-                    <a href="categorias.php" class="nav-link i-categorias text-white">
+                    <a href="categorias" class="nav-link i-categorias text-white">
                         <i class="fas fa-print me-2"></i>Categorías
                         
                     </a>

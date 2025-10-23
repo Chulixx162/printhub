@@ -7,7 +7,7 @@ function registrar($conn, $data) {
     $_SESSION['nombre'] = $data['nombre'];
     
 
-    header("Location: ../vista/admin/productos.php");
+    header("Location: ../vista/admin/productos");
 }
 function obtenerProductoPorID($conn, $id) {
     $result = mysqli_query($conn, "SELECT * FROM productos wHERE id = $id");
@@ -29,7 +29,7 @@ function obtenerCategorias($conn) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM productos WHERE id=$id");
-    header("Location: ../vista/admin/productos.php");
+    header("Location: ../vista/admin/productos");
 }
 
 function actualizar($conn, $data) {
@@ -47,7 +47,7 @@ function actualizar($conn, $data) {
             WHERE id = {$data['id']}";
 
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    header("Location: ../vista/admin/productos.php");
+    header("Location: ../vista/admin/productos");
 }
 
 function obtenerProductosConCategorias($conn) {

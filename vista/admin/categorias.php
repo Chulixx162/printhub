@@ -9,9 +9,11 @@
     padding: 1rem;
   }
 
-  th, td {
+  th,
+  td {
     word-break: break-word;
-    min-width: 120px; /* Evita que las columnas se aplasten demasiado en pantallas pequeñas */
+    min-width: 120px;
+    /* Evita que las columnas se aplasten demasiado en pantallas pequeñas */
   }
 
   @media (max-width: 576px) {
@@ -29,19 +31,21 @@
   }
 
   .descripcion-scroll {
-    max-height: 80px;       /* Alto máximo antes de hacer scroll vertical */
-    max-width: 250px;       /* Ancho máximo antes de hacer scroll horizontal */
+    max-height: 80px;
+    /* Alto máximo antes de hacer scroll vertical */
+    max-width: 250px;
+    /* Ancho máximo antes de hacer scroll horizontal */
     overflow: auto;
-    white-space: pre-wrap;  /* Mantiene saltos de línea */
+    white-space: pre-wrap;
+    /* Mantiene saltos de línea */
   }
-
 </style>
 
 <body>
-  <?php 
-    include '../../conexion.php';
-    include '../../modelo/categorias_m.php'; 
-    $categorias = obtenerCategorias($conn);
+  <?php
+  include '../../conexion.php';
+  include '../../modelo/categorias_m.php';
+  $categorias = obtenerCategorias($conn);
   ?>
 
   <div class="d-flex flex-column flex-lg-row">
@@ -89,7 +93,7 @@
                   <td><?= $categoria['nombre'] ?></td>
                   <td>
                     <textarea class="form-control descripcion-scroll" style="max-height: 100px; max-width: 100%; text-align: left; overflow-wrap: break-word;" readonly><?= $categoria['descripcion'] ?></textarea>
-                    
+
                   </td>
                   <?php if ($_SESSION['rol'] == 'ADMIN'): ?>
                     <td>
@@ -97,7 +101,7 @@
                         data-bs-target="#modalEditar<?= $categoria['id'] ?>">
                         <i class="fas fa-edit"></i>
                       </button>
-                      <button class="btn btn-sm btn-outline-danger" 
+                      <button class="btn btn-sm btn-outline-danger"
                         onclick="eliminar(event, <?= $categoria['id'] ?>)"><i class="fas fa-trash-alt"></i>
                       </button>
                     </td>
@@ -147,7 +151,7 @@
   <div class="modal fade" id="modalCategoria" tabindex="-1" aria-labelledby="modalCategoriaLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-      
+
         <div class="modal-header bg-primary text-white">
           <h5 class="modal-title" id="modalCategoriaLabel">Nueva Categoría</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -155,7 +159,7 @@
 
         <div class="modal-body">
           <form action='../../controlador/categorias_c.php?accion=registrar' method="POST">
-            
+
             <div class="mb-3">
               <label for="nombreCategoria" class="form-label">Nombre</label>
               <input type="text" class="form-control" name="nombre" id="nombreCategoria" required />
@@ -170,7 +174,7 @@
               <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
               <button class="btn btn-primary" type="submit">Guardar</button>
             </div>
-            
+
           </form>
         </div>
 
@@ -181,30 +185,31 @@
 
   <?php include('footer.php'); ?>
   <script>
-        async function eliminar(event, id) {
-            event.preventDefault();
-            const confirmarSalida = await confirmar(
-                '¿Estás seguro de que deseas eliminar esta CATEGORÍA?',
-                'SÍ', 'No', 'warning'
-            );
+    async function eliminar(event, id) {
+      event.preventDefault();
+      const confirmarSalida = await confirmar(
+        '¿Estás seguro de que deseas eliminar esta CATEGORÍA?',
+        'SÍ', 'No', 'warning'
+      );
 
-            if (confirmarSalida) {
-                window.location.href = `../../controlador/categorias_c.php?accion=eliminar&id=${id}`;
-            }
-        }
+      if (confirmarSalida) {
+        window.location.href = `../../controlador/categorias_c.php?accion=eliminar&id=${id}`;
+      }
+    }
 
-        // Filtro de búsqueda
-          document.getElementById("buscar").addEventListener("keyup", function () {
-          const filtro = this.value.toLowerCase();
-          const filas = document.querySelectorAll(".table-responsive tbody tr");
+    // Filtro de búsqueda
+    document.getElementById("buscar").addEventListener("keyup", function() {
+      const filtro = this.value.toLowerCase();
+      const filas = document.querySelectorAll(".table-responsive tbody tr");
 
-          filas.forEach(fila => {
-              const textoFila = fila.textContent.toLowerCase();
-              fila.style.display = textoFila.includes(filtro) ? "" : "none";
-          });
-          });
-    </script>
+      filas.forEach(fila => {
+        const textoFila = fila.textContent.toLowerCase();
+        fila.style.display = textoFila.includes(filtro) ? "" : "none";
+      });
+    });
+  </script>
 
   <script src="../../libs/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

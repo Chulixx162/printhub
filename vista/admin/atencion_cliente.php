@@ -1,89 +1,100 @@
-<?php 
-    include('header.php');
+<?php
+include('header.php');
 ?>
 <style>
- .table-responsive {
-  width: 100%;
-  overflow-x: auto; /* Scroll solo si es necesario */
-  overflow-y: hidden;
-  max-width: 100%;
-}
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        /* Scroll solo si es necesario */
+        overflow-y: hidden;
+        max-width: 100%;
+    }
 
-th, td {
-  text-align: left;
-  vertical-align: middle;
-  word-wrap: break-word;
-}
+    th,
+    td {
+        text-align: left;
+        vertical-align: middle;
+        word-wrap: break-word;
+    }
 
-/* ====== MÓVILES ====== */
-@media (max-width: 576px) {
-  .main-content h2 {
-    font-size: 1.4rem;
-  }
+    /* ====== MÓVILES ====== */
+    @media (max-width: 576px) {
+        .main-content h2 {
+            font-size: 1.4rem;
+        }
 
-  .table-responsive {
-    font-size: 0.9rem;
-  }
+        .table-responsive {
+            font-size: 0.9rem;
+        }
 
-  .btn {
-    font-size: 0.85rem;
-  }
+        .btn {
+            font-size: 0.85rem;
+        }
 
-  table {
-    min-width: 800px; /* Fuerza scroll horizontal en móviles */
-  }
+        table {
+            min-width: 800px;
+            /* Fuerza scroll horizontal en móviles */
+        }
 
-  th, td {
-    white-space: nowrap;
-  }
-}
+        th,
+        td {
+            white-space: nowrap;
+        }
+    }
 
-/* ====== TABLETS ====== */
-@media (min-width: 577px) and (max-width: 991px) {
-  .table-responsive {
-    font-size: 0.95rem;
-  }
+    /* ====== TABLETS ====== */
+    @media (min-width: 577px) and (max-width: 991px) {
+        .table-responsive {
+            font-size: 0.95rem;
+        }
 
-  table {
-    min-width: 900px; /* Puede necesitar scroll */
-  }
+        table {
+            min-width: 900px;
+            /* Puede necesitar scroll */
+        }
 
-  th, td {
-    white-space: nowrap;
-  }
-}
+        th,
+        td {
+            white-space: nowrap;
+        }
+    }
 
-/* ====== ESCRITORIO (PC) ====== */
-@media (min-width: 992px) {
-  table {
-    width: 100%;
-    min-width: unset;   /* Se adapta al ancho disponible */
-    table-layout: auto; /* Ajusta automáticamente las columnas */
-  }
+    /* ====== ESCRITORIO (PC) ====== */
+    @media (min-width: 992px) {
+        table {
+            width: 100%;
+            min-width: unset;
+            /* Se adapta al ancho disponible */
+            table-layout: auto;
+            /* Ajusta automáticamente las columnas */
+        }
 
-  th, td {
-    white-space: normal;    /* Permite saltos de línea */
-    word-wrap: break-word;  /* Rompe palabras largas */
-  }
-}
-
+        th,
+        td {
+            white-space: normal;
+            /* Permite saltos de línea */
+            word-wrap: break-word;
+            /* Rompe palabras largas */
+        }
+    }
 </style>
+
 <body>
-    <?php 
-        include '../../conexion.php';
-        include '../../modelo/atenciones_m.php';
-        $atenciones = obtenerAtenciones($conn);
+    <?php
+    include '../../conexion.php';
+    include '../../modelo/atenciones_m.php';
+    $atenciones = obtenerAtenciones($conn);
     ?>
 
     <div class="d-flex flex-column flex-lg-row">
 
-        <?php include ('sidebar.php'); ?>
+        <?php include('sidebar.php'); ?>
 
         <!-- Contenido principal -->
         <div class="flex-grow-1">
             <nav class="navbar navbar-dark">
                 <div class="container-fluid">
-                    
+
                     <span class="navbar-brand">Gestión de Atención Al Cliente</span>
                     <div class="dataTables_filter">
                         <input type="search" id="buscar" class="form-control form-control-sm" placeholder="Buscar...">
@@ -94,7 +105,7 @@ th, td {
             <div class="main-content">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="mb-0 mt-4">Atención</h2>
-                   
+
                 </div>
 
                 <!-- Tabla -->
@@ -119,12 +130,12 @@ th, td {
                                     <td><?= $atencion['nombre'] ?></td>
                                     <td><?= $atencion['correo'] ?></td>
                                     <td>
-                                    <a href="https://wa.me/57<?= preg_replace('/\D/', '', $atencion['telefono']) ?>" target="_blank">
-                                        <?= $atencion['telefono'] ?>
-                                    </a>
+                                        <a href="https://wa.me/57<?= preg_replace('/\D/', '', $atencion['telefono']) ?>" target="_blank">
+                                            <?= $atencion['telefono'] ?>
+                                        </a>
                                     </td>
 
-                                   <td>
+                                    <td>
                                         <textarea lass="overflow-auto" style="
                                             max-height: 100px;
                                             max-width: 100%;
@@ -140,59 +151,59 @@ th, td {
                                             "
                                             readonly><?= htmlspecialchars($atencion['mensaje']) ?>
                                         </textarea>
-                                        
+
                                     </td>
 
                                     <td><?= $atencion['fecha'] ?></td>
 
-                                    <td style="<?= $atencion['estado']=='RE' ? 'background-color:#28a745;color:#fff;padding:5px;border-radius:4px;text-align:center;' : ($atencion['estado']=='PE' ? 'background-color:#dc3545;color:#fff;padding:5px;border-radius:4px;text-align:center;' : '') ?>">
+                                    <td style="<?= $atencion['estado'] == 'RE' ? 'background-color:#28a745;color:#fff;padding:5px;border-radius:4px;text-align:center;' : ($atencion['estado'] == 'PE' ? 'background-color:#dc3545;color:#fff;padding:5px;border-radius:4px;text-align:center;' : '') ?>">
                                         <?= htmlspecialchars($atencion['estado']) ?>
                                     </td>
 
 
-                                    
+
                                     <td>
-                                    <button class="btn btn-sm btn-outline-primary m-2" data-bs-toggle="modal"
-                                        data-bs-target="#modalEditar<?= $atencion['id'] ?>">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-danger m-2" 
-                                        onclick="eliminar(event, <?= $atencion['id'] ?>)"><i class="fas fa-trash-alt"></i>
-                                    </button>
+                                        <button class="btn btn-sm btn-outline-primary m-2" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditar<?= $atencion['id'] ?>">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger m-2"
+                                            onclick="eliminar(event, <?= $atencion['id'] ?>)"><i class="fas fa-trash-alt"></i>
+                                        </button>
                                     </td>
                                 </tr>
-                                
+
                                 <!--Modal editar Atencion -->
                                 <div class="modal fade" id="modalEditar<?= $atencion['id'] ?>" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header bg-primary text-white">
-                                            <h5 class="modal-title">Editar Atención</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                <h5 class="modal-title">Editar Atención</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <form action="../../controlador/atenciones_c.php?accion=actualizar" method="POST">
                                                     <input type="hidden" name="id" value="<?= $atencion['id'] ?>" />
-                                                    
+
                                                     <div class="mb-3">
-                                                    <label class="form-label">Estado</label>
-                                                    <select class="form-select" name="estado">
-                                                        <option value="PE" <?= $atencion['estado'] == 'PE' ? 'selected' : '' ?>>PENDIENTE</option>
-                                                        <option value="RE" <?= $atencion['estado'] == 'RE' ? 'selected' : '' ?>>RESUELTA</option>
-                                                        
-                                                    </select>
+                                                        <label class="form-label">Estado</label>
+                                                        <select class="form-select" name="estado">
+                                                            <option value="PE" <?= $atencion['estado'] == 'PE' ? 'selected' : '' ?>>PENDIENTE</option>
+                                                            <option value="RE" <?= $atencion['estado'] == 'RE' ? 'selected' : '' ?>>RESUELTA</option>
+
+                                                        </select>
                                                     </div>
-                                                
+
                                                     <div class="modal-footer">
-                                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="submit" class="btn btn-primary">Guardar</button>
                                                     </div>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -202,7 +213,7 @@ th, td {
     </div>
 
 
-    <?php include ('footer.php'); ?>
+    <?php include('footer.php'); ?>
     <script>
         async function eliminar(event, id) {
             event.preventDefault();
@@ -217,14 +228,14 @@ th, td {
         }
 
         // Filtro de búsqueda
-        document.getElementById("buscar").addEventListener("keyup", function () {
-        const filtro = this.value.toLowerCase();
-        const filas = document.querySelectorAll(".table-responsive tbody tr");
+        document.getElementById("buscar").addEventListener("keyup", function() {
+            const filtro = this.value.toLowerCase();
+            const filas = document.querySelectorAll(".table-responsive tbody tr");
 
-        filas.forEach(fila => {
-            const textoFila = fila.textContent.toLowerCase();
-            fila.style.display = textoFila.includes(filtro) ? "" : "none";
-        });
+            filas.forEach(fila => {
+                const textoFila = fila.textContent.toLowerCase();
+                fila.style.display = textoFila.includes(filtro) ? "" : "none";
+            });
         });
     </script>
 

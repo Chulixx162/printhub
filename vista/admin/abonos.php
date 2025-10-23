@@ -4,7 +4,7 @@ include '../../conexion.php';
 include '../../modelo/abonosAdmin_m.php';
 $abonos = obtenerAbonos($conn);
 if ($_SESSION['rol'] === 'ATENCION_CLIENTE') {
-    header('Location: vista_general.php');
+    header('Location: vista_general');
     exit();
 }
 ?>

@@ -15,7 +15,7 @@ elseif ($accion == 'eliminar') {
         $index = $_POST['index'];
         eliminarDelCarrito($index); // debe estar definido en el modelo
     }
-    header("Location: ../vista/general/carrito.php");
+    header("Location: ../vista/general/carrito");
     exit();
 }
 elseif ($accion == 'finalizar') {

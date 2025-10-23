@@ -37,7 +37,7 @@ function agregar($data)
         $_SESSION['carrito'][] = $item;
     }
 
-    header("Location: ../vista/general/productos.php");
+    header("Location: ../vista/general/productos");
     exit();
 }
 
@@ -50,7 +50,7 @@ function actualizar($data)
         $_SESSION['carrito'][$index]['cantidad'] = $cantidad;
     }
 
-    header("Location: ../vista/general/carrito.php");
+    header("Location: ../vista/general/carrito");
     exit();
 }
 
@@ -72,14 +72,14 @@ function finalizar()
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('El carrito está vacío.','VOLVER', '../vista/general/Productos.php', 'error');
+                            informar('El carrito está vacío.','VOLVER', '../vista/general/productos', 'error');
                         </script>
                 </body>";
         exit();
     }
 
     if (!isset($_SESSION['id_cliente'])) {
-        echo "<script>alert('Debe iniciar sesión para finalizar la compra.');window.location.href='../login.php';</script>";
+        echo "<script>alert('Debe iniciar sesión para finalizar la compra.');window.location.href='../login';</script>";
         return;
     }
 
@@ -206,7 +206,7 @@ function finalizar()
         <script>
             const link = document.createElement('a');
             link.href = '$pdfPath';
-            link.download = 'SOLICITUD_COMPRA_PRINT_N°$id_venta.pdf';
+            link.download = 'SOLICITUD_COMPRA_PRINTHUB_N°$id_venta.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -224,7 +224,7 @@ function finalizar()
                 if (result.isConfirmed) {
                     window.open('$urlWhatsapp', '_blank');
                     setTimeout(() => {
-                        window.location.href = '../vista/general/Productos.php';
+                        window.location.href = '../vista/general/Productos';
                     }, 200);
                 }
             });

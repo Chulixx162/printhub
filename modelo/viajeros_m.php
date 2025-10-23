@@ -8,7 +8,7 @@ function registrar($conn, $data) {
     $_SESSION['nombre'] = $data['nombre'];
     
 
-    header("Location: ../vista/admin/circulo_viajero.php");
+    header("Location: ../vista/admin/circulo_viajero");
 }
 
 function obtenerViajeros($conn) {
@@ -19,13 +19,13 @@ function obtenerViajeros($conn) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM viajeros WHERE id=$id");
-    header("Location: ../vista/admin/circulo_viajero.php");
+    header("Location: ../vista/admin/circulo_viajero");
 }
 
 function actualizar($conn, $data) {
     $sql = "UPDATE viajeros SET nombre='{$data['nombre']}', tipo_de_documento='{$data['tipo_documento']}', numero_de_documento='{$data['numero_documento']}', contacto_1='{$data['contacto1']}', contacto_2='{$data['contacto2']}', direccion='{$data['direccion']}'  WHERE id={$data['id']}";
     mysqli_query($conn, $sql);
-    header("Location: ../vista/admin/circulo_viajero.php");
+    header("Location: ../vista/admin/circulo_viajero");
 }
 
 ?>

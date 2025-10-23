@@ -11,7 +11,7 @@ function registrar($conn, $data) {
         <script src='../vista/alertas/funcionesalert.js'></script>
         <body>
                 <script>
-                    informar('SOLICITUD DE ABONO ENVIADA EXITOSAMENTE.','ACEPTAR', '../vista/general/perfil.php', 'success');
+                    informar('SOLICITUD DE ABONO ENVIADA EXITOSAMENTE.','ACEPTAR', '../vista/general/perfil', 'success');
                 </script>
         </body>";
         
@@ -22,7 +22,7 @@ function registrar($conn, $data) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM abonos WHERE id=$id");
-    header("Location: ../vista/admin/productos.php");
+    header("Location: ../vista/admin/productos");
 }
 
 function actualizar($conn, $data) {
@@ -36,7 +36,7 @@ function actualizar($conn, $data) {
             WHERE id = {$data['id_abono']}";
 
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    header("Location: ../vista/admin/abonos.php");
+    header("Location: ../vista/admin/abonos");
 }
 
 function obtenerAbonosPorVenta($conn, $id_venta) {

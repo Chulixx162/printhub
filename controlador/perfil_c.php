@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         text: 'Tus datos se han guardado correctamente',
                         confirmButtonText: 'Aceptar'
                     }).then(() => {
-                        window.location.href='../vista/general/perfil.php';
+                        window.location.href='../vista/general/perfil';
                     });
                 </script>
             </body>

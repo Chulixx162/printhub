@@ -20,7 +20,7 @@ function registrar($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('CATEGORÍA REGISTRADA EXITÓSAMENTE.','Ok.', '../vista/admin/categorias.php', 'success');
+                            informar('CATEGORÍA REGISTRADA EXITÓSAMENTE.','Ok.', '../vista/admin/categorias', 'success');
                         </script>
                 </body>";
                 exit();
@@ -32,7 +32,7 @@ function registrar($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('El nombre de la categoría ya está registrado.','Reintentar.', '../vista/admin/categorias.php', 'error');
+                            informar('El nombre de la categoría ya está registrado.','Reintentar.', '../vista/admin/categorias', 'error');
                         </script>
                 </body>";
                 exit();
@@ -51,7 +51,7 @@ function obtenerCategorias($conn) {
 
 function eliminar($conn, $id) {
     mysqli_query($conn, "DELETE FROM categorias WHERE id=$id");
-    header("Location: ../vista/admin/categorias.php");
+    header("Location: ../vista/admin/categorias");
 }
 
 function actualizar($conn, $data) {
@@ -61,6 +61,6 @@ function actualizar($conn, $data) {
         WHERE id = {$data['id']}";
 
     mysqli_query($conn, $sql);
-    header("Location: ../vista/admin/categorias.php");
+    header("Location: ../vista/admin/categorias");
 }
 ?>

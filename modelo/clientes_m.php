@@ -22,11 +22,11 @@ function login($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('Bienvenido " . addslashes($_SESSION["nombre"]) . "','ACEPTAR', '../vista/general/PaginaPrincipal.php', 'success');
+                            informar('Bienvenido " . addslashes($_SESSION["nombre"]) . "','ACEPTAR', '../vista/general/PaginaPrincipal', 'success');
                         </script>
             </body>";
 
-            // header("Location: ../vista/general/PaginaPrincipal.php");
+            // header("Location: ../vista/general/PaginaPrincipal");
             exit();
         }else{
          echo "
@@ -34,7 +34,7 @@ function login($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('CLAVE INCORRECTA','REINTENTAR', '../vista/login.php', 'error');
+                            informar('CLAVE INCORRECTA','REINTENTAR', '../vista/login', 'error');
                         </script>
             </body>";
         }
@@ -44,7 +44,7 @@ function login($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('CLIENTE NO ENCONTRADO','REINTENTAR', '../vista/login.php', 'warning');
+                            informar('CLIENTE NO ENCONTRADO','REINTENTAR', '../vista/login', 'warning');
                         </script>
             </body>";
         exit();
@@ -55,7 +55,7 @@ function salir(){
     session_start();
     session_unset();
     session_destroy();
-    header("Location: ../vista/login.php");
+    header("Location: ../vista/login");
     exit();
 }
 
@@ -104,7 +104,7 @@ function registrar($conn, $data) {
         <script src='../vista/alertas/funcionesalert.js'></script>
         <body>
                 <script>
-                    informar('CLIENTE REGISTRADO EXITÓSAMENTE.','Ok.', '../vista/login.php', 'success');
+                    informar('CLIENTE REGISTRADO EXITÓSAMENTE.','Ok.', '../vista/login', 'success');
                 </script>
         </body>";
         
@@ -120,7 +120,7 @@ function registrar($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                         <script>
-                            informar('El Correo o el Número de Documento ya está registrado. Por favor, verifica los datos ingresados.','Ok.', '../vista/crear_cuenta.php', 'error');
+                            informar('El Correo o el Número de Documento ya está registrado. Por favor, verifica los datos ingresados.','Ok.', '../vista/crear_cuenta', 'error');
                         </script>
                 </body>";
         } else {
@@ -141,7 +141,7 @@ function obtenerClientes($conn) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM clientes WHERE id=$id");
-    header("Location: ../vista/admin/clientes.php");
+    header("Location: ../vista/admin/clientes");
 }
 
 function actualizar($conn, $data) {
@@ -188,7 +188,7 @@ function actualizar($conn, $data) {
         die("Error al preparar la consulta: " . mysqli_error($conn));
     }
 
-    header("Location: ../vista/admin/clientes.php");
+    header("Location: ../vista/admin/clientes");
 }
 
 

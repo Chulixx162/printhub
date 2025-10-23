@@ -11,7 +11,7 @@ function registrar($conn, $data) {
         <script src='../vista/alertas/funcionesalert.js'></script>
         <body>
                 <script>
-                    informar('Se envió correctamente tu mensaje, pronto nos pondremos en contacto contigo.','Ok, Muchas Gracias.', '../vista/general/contactanos.php', 'success');
+                    informar('Se envió correctamente tu mensaje, pronto nos pondremos en contacto contigo.','Ok, Muchas Gracias.', '../vista/general/contactanos', 'success');
                 </script>
         </body>";
 }
@@ -24,13 +24,13 @@ function obtenerAtenciones($conn) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM atencion_clientes WHERE id=$id");
-    header("Location: ../vista/admin/atencion_cliente.php");
+    header("Location: ../vista/admin/atencion_cliente");
 }
 
 function actualizar($conn, $data) {
     $sql = "UPDATE atencion_clientes SET estado='{$data['estado']}'  WHERE id={$data['id']}";
     mysqli_query($conn, $sql);
-    header("Location: ../vista/admin/atencion_cliente.php");
+    header("Location: ../vista/admin/atencion_cliente");
 }
 
 ?>

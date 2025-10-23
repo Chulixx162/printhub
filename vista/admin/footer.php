@@ -19,7 +19,7 @@
                 <!-- Columna 3 -->
                 <div class="col-12 col-md-3 text-center text-md-start">
                     <h6 class="fw-bold">Síguenos</h6>
-                    <a href="https://www.facebook.com/share/1aEM7MnAdN/" class="text-white me-3" target="_blank" rel="noopener noreferrer">
+                    <a href="#" class="text-white me-3" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook fa-lg"></i>
                     </a>
                     <a href="#" class="text-white me-3">

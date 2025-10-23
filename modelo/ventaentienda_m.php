@@ -24,7 +24,7 @@ function agregar($data, $conn) {
     $producto = mysqli_fetch_assoc($res);
 
     if (!$producto) {
-        header("Location: ../vista/admin/venta_tienda.php");
+        header("Location: ../vista/admin/venta_tienda");
         exit();
     }
 
@@ -56,7 +56,7 @@ function agregar($data, $conn) {
         $_SESSION['carrito'][] = $item;
     }
 
-    header("Location: ../vista/admin/venta_tienda.php");
+    header("Location: ../vista/admin/venta_tienda");
     exit();
 }
 
@@ -68,7 +68,7 @@ function actualizar($data) {
         $_SESSION['carrito'][$index]['cantidad'] = $cantidad;
     }
 
-    header("Location: ../vista/admin/venta_tienda.php");
+    header("Location: ../vista/admin/venta_tienda");
     exit();
 }
 
@@ -78,7 +78,7 @@ function eliminarDelCarrito($index) {
         $_SESSION['carrito'] = array_values($_SESSION['carrito']);
     }
 
-    header("Location: ../vista/admin/venta_tienda.php");
+    header("Location: ../vista/admin/venta_tienda");
     exit();
 }
 
@@ -87,7 +87,7 @@ function finalizar($conn){
     $fecha = date('Y-m-d H:i:s');
 
     if (!isset($_SESSION['carrito']) || empty($_SESSION['carrito'])) {
-        header("Location: ../vista/admin/venta_tienda.php");
+        header("Location: ../vista/admin/venta_tienda");
         exit();
     }
 
@@ -119,7 +119,7 @@ function finalizar($conn){
         <script src='../vista/alertas/funcionesalert.js'></script>
         <body>
                 <script>
-                    informar('Venta realizada.','ACEPTAR', '../vista/admin/pedidos_tienda.php', 'success');
+                    informar('Venta realizada.','ACEPTAR', '../vista/admin/pedidos_tienda', 'success');
                 </script>
         </body>";
         exit();

@@ -1,6 +1,6 @@
 <?php include('header.php');
 if ($_SESSION['rol'] !== 'ADMIN') {
-  header("Location: vista_general.php");
+  header("Location: vista_general");
   exit();
 }
 ?>
@@ -150,10 +150,7 @@ if ($_SESSION['rol'] !== 'ADMIN') {
                     <div class="modal-body">
                       <form action="../../controlador/usuarios_c.php?accion=actualizar" method="POST">
                         <input type="hidden" name="id" value="<?= $usuario['id'] ?>" />
-                        <!-- <div class="mb-3">
-                        <label for="contacto1usuarios" class="form-label">Imagen</label>
-                        <input type="file" id="imagen" name="imagen" accept="image/*" class="form-control" />
-                      </div> -->
+                        
                         <div class="mb-3">
                           <label for="nombreusuarios" class="form-label">Nombre</label>
                           <input type="text" class="form-control" name="nombre" value="<?= $usuario['nombre'] ?>" />
@@ -313,10 +310,7 @@ if ($_SESSION['rol'] !== 'ADMIN') {
         </div>
         <div class="modal-body">
           <form action='../../controlador/usuarios_c.php?accion=registrar' method="POST">
-            <!-- <div class="mb-3">
-              <label for="contacto1usuarios" class="form-label">Imagen</label>
-              <input type="file" id="imagen" name="imagen" accept="image/*" class="form-control" />
-            </div> -->
+            
             <div class="mb-3">
               <label for="nombreusuarios" class="form-label">Nombre</label>
               <input type="text" class="form-control" name="nombre" id="nombreusuarios" required />

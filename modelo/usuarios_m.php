@@ -27,7 +27,7 @@ function login($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                     <script>
-                        informar('$mensaje', 'ACEPTAR', '../vista/admin/vista_general.php', 'success');
+                        informar('$mensaje', 'ACEPTAR', '../vista/admin/vista_general', 'success');
                     </script>
                 </body>";
             exit();
@@ -37,7 +37,7 @@ function login($conn, $data) {
                 <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                     <script>
-                        informar('CLAVE INCORRECTA, Por favor, verifica tu contraseña.', 'REINTENTAR', '../vista/admin/login_admin.php', 'warning');
+                        informar('CLAVE INCORRECTA, Por favor, verifica tu contraseña.', 'REINTENTAR', '../vista/admin/login_admin', 'warning');
                     </script>
                 </body>";
             exit();
@@ -48,7 +48,7 @@ function login($conn, $data) {
             <script src='../vista/alertas/funcionesalert.js'></script>
                 <body>
                     <script>
-                        informar('USUARIO NO ENCONTRADO', 'REINTENTAR', '../vista/admin/login_admin.php', 'error');
+                        informar('USUARIO NO ENCONTRADO', 'REINTENTAR', '../vista/admin/login_admin', 'error');
                     </script>
                 </body>";
         exit();
@@ -59,7 +59,7 @@ function salir(){
     session_start();
     session_unset();
     session_destroy();
-    header("Location: ../vista/login.php");
+    header("Location: ../vista/login");
     exit();
 }
 
@@ -70,7 +70,7 @@ function registrar($conn, $data) {
     $_SESSION['nombre'] = $data['nombre'];
     $_SESSION['rol'] = $data['rolUsuario'];
 
-    header("Location: ../vista/admin/usuarios.php");
+    header("Location: ../vista/admin/usuarios");
 }
 
 function obtenerUsuarios($conn) {
@@ -81,7 +81,7 @@ function obtenerUsuarios($conn) {
 function eliminar($conn, $id) {
    
     mysqli_query($conn, "DELETE FROM usuarios WHERE id=$id");
-    header("Location: ../vista/admin/usuarios.php");
+    header("Location: ../vista/admin/usuarios");
 }
 
 function actualizar($conn, $data) {
@@ -120,7 +120,7 @@ function actualizar($conn, $data) {
 
     // Ejecutamos la consulta
     if ($stmt->execute()) {
-        header("Location: ../vista/admin/usuarios.php");
+        header("Location: ../vista/admin/usuarios");
         exit();
     } else {
         echo "Error al actualizar: " . $stmt->error;
