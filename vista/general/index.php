@@ -6,14 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JYS Promotores de Viajes</title>
+    <title>Print Hub</title>
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="icon" href="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png">
+    <link rel="icon" href="../../IMAGENES/logo_printhub.png">
     <link rel="stylesheet" href="../../libs/bootstrap-icons-1.11.3/a/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../libs/fontawesome-free-6.7.2-web/css/all.min.css">
     <style>
         .hero {
-            background-image: url('../../IMAGENES/playa2.jpg');
+            background-image: url('https://i.blogs.es/f182a7/pixma_pro-100s_video_tcm86-1328769/1366_2000.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -23,7 +23,7 @@
         }
 
         .hero-overlay {
-            background-color: #189cca;
+            background-color: #7c7c7b;
             padding: 2rem;
             border-radius: 1rem;
         }
@@ -46,8 +46,8 @@
         }
 
         .navbar {
-            background-color: #00a9d4;
-            color: white;
+            background-color: #ffffffff;
+            color: black;
         }
 
         /* #00a9d4 */
@@ -63,7 +63,7 @@
         }
 
         .ya {
-            background-color: #189cca;
+            background-color: #7c7c7b;
             padding: 2rem;
             border-radius: 1rem;
         }
@@ -81,7 +81,7 @@
         } */
 
         .nav-menu {
-            color: #fff;
+            color: #000000ff;
             text-decoration: none;
             padding: 10px 15px;
             margin-right: 10px;
@@ -99,7 +99,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #fff;
+            background-color: #000000ff;
             transition: width 0.3s ease-in-out;
         }
 
@@ -111,7 +111,7 @@
             bottom: 0;
             width: 100%;
             height: 3px;
-            background-color: #fff;
+            background-color: #000000ff;
             border-radius: 2px;
             transition: width 0.3s ease-in-out;
         }
@@ -185,7 +185,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <img src="../../IMAGENES/Logotipo_sinsombrapng_Mesa de trabajo 1-02.png"
+            <img src="../../IMAGENES/logo_printhub.png" 
                     width="120" alt="Logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -193,11 +193,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-menu active" href="#">Inicio</a></li>
-                    <!-- <li class="nav-item"><a class="nav-menu" href="http://localhost/SIW-TURISMO/vista/general/login.php">Servicios</a> -->
                     </li>
                     <li class="nav-item"><a class="nav-menu"
                             href="contactanos.php">Contacto</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light "
+                    <li class="nav-item"><a class="btn btn-outline-dark"
                             href="../login.php">INGRESAR</a></li>
                 </ul>
             </div>
@@ -210,9 +209,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4">
                     <div class="hero-overlay">
-                        <h1 class="fw-bold">Explora, vive y disfruta</h1>
-                        <p class="lead">En <strong>JYS Promotores de Viajes y Turismo</strong> nos encargamos de planear
-                            tu viaje soñado. Más que una agencia, somos tu guía de aventuras.</p>
+                        <h1 class="fw-bold">Bienvenido a <strong>PRINTHUB</strong></h1>
+                        <p class="lead">En <strong>PRINTHUB</strong> encontrarás todo lo que necesitas para tu impresora, desde estas mismas, hasta accesorios y componentes de alta calidad.</p>
                         <a href="quienes_somos.php"
                             class="btn btn-outline-light">Conócenos</a>
                     </div>
@@ -232,18 +230,18 @@
     <!-- tarjetas -->
     <section id="servicios" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">¿Por qué viajar con nosotros?</h2>
+            <h2 class="text-center mb-5 fw-bold">¿Por qué elegirnos para tus servicios?</h2>
             <div class="row g-4">
 
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 text-center shadow-sm">
                         <div class="card-body">
                             <div class="mb-3">
-                                <i class="fas fa-shoe-prints text-primary" style="font-size: 2rem;"></i>
+                                <i class="fas fa-shoe-prints text-dark" style="font-size: 2rem;"></i>
                             </div>
-                            <h5 class="card-title fw-bold">Experiencias de alta calidad</h5>
-                            <p class="card-text">En JYS Promotores, diseñamos viajes únicos con destinos inolvidables,
-                                atención personalizada y planes hechos a tu medida. Vivencias que superan expectativas.
+                            <h5 class="card-title fw-bold">Productos de alta calidad</h5>
+                            <p class="card-text">
+                                Nuestros productos son de la mejor calidad, con un excelente rendimiento y durabilidad. Además, contamos con garantía para tu tranquilidad.
                             </p>
                         </div>
                     </div>
@@ -253,11 +251,10 @@
                     <div class="card h-100 text-center shadow-sm">
                         <div class="card-body">
                             <div class="mb-3">
-                                <i class="fas fa-user-check text-primary" style="font-size: 2rem;"></i>
+                                <i class="fas fa-user-check text-dark" style="font-size: 2rem;"></i>
                             </div>
                             <h5 class="card-title fw-bold">Pensamos en ti</h5>
-                            <p class="card-text">Tu comodidad y felicidad son nuestra prioridad. Cada destino, actividad
-                                y hotel ha sido seleccionado pensando en lo que tú y tu familia realmente necesitan.</p>
+                            <p class="card-text">Nuestro equipo de expertos te ayudará a encontrar el producto perfecto para tus necesidades. Contamos con un servicio de asesoramiento personalizado.</p>
                         </div>
                     </div>
                 </div>
@@ -266,11 +263,10 @@
                     <div class="card h-100 text-center shadow-sm">
                         <div class="card-body">
                             <div class="mb-3">
-                                <i class="fas fa-bus text-primary" style="font-size: 2rem;"></i>
+                                <i class="fas fa-bus text-dark" style="font-size: 2rem;"></i>
                             </div>
-                            <h5 class="card-title fw-bold">Viajes a todo Colombia</h5>
-                            <p class="card-text">Desde el Amazonas hasta La Guajira, te llevamos a conocer los rincones
-                                más asombrosos del país. ¡Descubre Colombia con nosotros de forma segura y confiable!
+                            <h5 class="card-title fw-bold">Envíos a todo el país</h5>
+                            <p class="card-text"> Realizamos envíos rápidos y seguros a cualquier parte del país. Además, ofrecemos seguimiento en tiempo real para que siempre sepas dónde está tu pedido.
                             </p>
                         </div>
                     </div>
@@ -280,12 +276,12 @@
                     <div class="card h-100 text-center shadow-sm">
                         <div class="card-body">
                             <div class="mb-3">
-                                <i class="fas fa-map-marker-alt text-primary" style="font-size: 2rem;"></i>
+                                <i class="fas fa-map-marker-alt text-dark" style="font-size: 2rem;"></i>
                             </div>
-                            <h5 class="card-title fw-bold">Atención local en Teruel</h5>
-                            <p class="card-text">¿Estás cerca de Teruel? Te atendemos personalmente para planear juntos
+                            <h5 class="card-title fw-bold">Atención local en Neiva</h5>
+                            <p class="card-text">¿Estás cerca de Neiva? Te atendemos personalmente en nuestra tienda física para ayudarte a elegir lo mejor para
                                 tu
-                                próxima aventura. ¡Conócenos y recibe asesoría directa y personalizada!</p>
+                                impresora ¡Conócenos y recibe asesoría directa y personalizada!</p>
                         </div>
                     </div>
                 </div>
@@ -298,10 +294,10 @@
     <div class="row">
         <div class="col-12">
             <div class="social-buttons text-center">
-                <a href="https://wa.me/573143144506" target="_blank">
+                <a href="https://wa.me/573102366157" target="_blank">
                     <img src="../../IMAGENES/whatsapp.png" alt="WhatsApp">
                 </a>
-                <a href="https://www.facebook.com/share/1aEM7MnAdN/" target="_blank">
+                <a href="#" target="_blank">
                     <img src="../../IMAGENES/facebook.png" alt="Facebook">
                 </a>
             </div>
@@ -314,8 +310,8 @@
 
     <!-- FOOTER -->
     <footer class="text-center">
-        <p class="mb-0">&copy; <span id="year"></span> <br>JYS Promotores de Viajes y Turismo. Todos los derechos reservados.</p>
-        <p>Síguenos en redes sociales | Contacto: 3143144506</p>
+        <p class="mb-0">&copy; <span id="year"></span> <br>Print Hub. Todos los derechos reservados.</p>
+        <p>Síguenos en redes sociales | Contacto: 3102366157</p>
     </footer>
     <!--FECHA-->
     <script>

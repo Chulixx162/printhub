@@ -5,7 +5,7 @@
             <div class="row">
                 <!-- Columna 1 -->
                 <div class="col-12 col-md-6 mb-4 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold">SIW-TURISMO</h5>
+                    <h5 class="fw-bold">PRINTHUB</h5>
                     <p class="mb-1">Sistema de Información Web para la Gestión de Reservas y Paquetes Turísticos <br> (SIW-TURISMO)</p>
                     <p class="mb-0">&copy; <span id="year"></span> JYS Promotores de Viajes y Turismo. <br> Todos los derechos reservados.</p>
                 </div>
