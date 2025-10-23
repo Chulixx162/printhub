@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- http://localhost/SIW-TURISMO/vista/general/index.php -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -195,9 +193,9 @@
                     <li class="nav-item"><a class="nav-menu active" href="#">Inicio</a></li>
                     </li>
                     <li class="nav-item"><a class="nav-menu"
-                            href="contactanos.php">Contacto</a></li>
+                            href="contactanos">Contacto</a></li>
                     <li class="nav-item"><a class="btn btn-outline-dark"
-                            href="../login.php">INGRESAR</a></li>
+                            href="../login">INGRESAR</a></li>
                 </ul>
             </div>
         </div>
@@ -211,7 +209,7 @@
                     <div class="hero-overlay">
                         <h1 class="fw-bold">Bienvenido a <strong>PRINTHUB</strong></h1>
                         <p class="lead">En <strong>PRINTHUB</strong> encontrarás todo lo que necesitas para tu impresora, desde estas mismas, hasta accesorios y componentes de alta calidad.</p>
-                        <a href="quienes_somos.php"
+                        <a href="quienes_somos"
                             class="btn btn-outline-light">Conócenos</a>
                     </div>
                 </div>
@@ -219,7 +217,7 @@
                     <div class="ya text-light p-4 ">
                         <h4 class="mb-3">¿Ya tienes cuenta?</h4>
                         <p>Haz clic aquí para iniciar sesión:</p>
-                        <a href="../login.php" class="inicia btn btn-outline-light">Iniciar
+                        <a href="../login" class="inicia btn btn-outline-light">Iniciar
                             sesión</a>
                     </div>
                 </div>

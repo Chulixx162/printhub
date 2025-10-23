@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['id_cliente'])) {
-        header("Location: ../login.php");
+        header("Location: ../login");
         exit();
     }
     include '../../conexion.php';
@@ -127,13 +127,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="PaginaPrincipal.php">
+                        <a class="nav-link" href="PaginaPrincipal">
                             <i class="fas fa-home"></i> Página Principal
                             <hr>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="carrito.php">
+                        <a class="nav-link" href="carrito">
                             <i class="fas fa-cart-shopping"></i> Carrito
                             <?php if ($haycarrito): ?>
                                 <span class="badge bg-danger"><?php echo count($_SESSION['carrito']); ?></span>
@@ -142,7 +142,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="perfil.php" class="nav-link"><i class="fas fa-user"></i> Perfil <hr></a>
+                        <a href="perfil" class="nav-link"><i class="fas fa-user"></i> Perfil <hr></a>
                     </li>
                     
                     
@@ -290,8 +290,8 @@
             <!-- Sección: Enlaces -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-warning">Enlaces</h5>
-                <p><a href="PaginaPrincipal.php" class="text-white text-decoration-none">Inicio</a></p>
-                <p><a href="quienes_somos.php" class="text-white text-decoration-none">Nosotros</a></p>
+                <p><a href="PaginaPrincipal" class="text-white text-decoration-none">Inicio</a></p>
+                <p><a href="quienes_somos" class="text-white text-decoration-none">Nosotros</a></p>
             </div>
 
             <!-- Sección: Contacto -->

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['id_cliente'])) {
-  header("Location: ../login.php");
+  header("Location: ../login");
   exit();
 }
 ?>
@@ -63,7 +63,7 @@ if (!isset($_SESSION['id_cliente'])) {
 
 <body>
   <!-- Botón flotante para regresar -->
-  <button onclick="window.location.href='productos.php';"
+  <button onclick="window.location.href='productos';"
     style="
             position: fixed;
         bottom: 20px;
@@ -180,7 +180,7 @@ if (!isset($_SESSION['id_cliente'])) {
     </div>
   </div>
   <!-- Botón flotante para regresar -->
-  <button onclick="window.location.href='productos.php';"
+  <button onclick="window.location.href='productos';"
     style="
             position: fixed;
         bottom: 20px;

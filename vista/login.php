@@ -255,7 +255,7 @@
 	</section>
 
 	<!-- BOTÓN FLOTANTE -->
-	<button onclick="window.location.href='../vista/general/index.php'" class="floating-btn">
+	<button onclick="window.location.href='../vista/general/index'" class="floating-btn">
 		<i class="fas fa-home"></i>
 	</button>
 
@@ -276,12 +276,12 @@
 
 		<input type="submit" value="Iniciar sesión" class="btncolor mb-3">
 		
-		<a href="general/crear_cuenta.php">¿No tienes cuenta? Crea una aquí</a>
+		<a href="general/crear_cuenta">¿No tienes cuenta? Crea una aquí</a>
 	</form>
 
 	<!-- Botón admin -->
 	<div class="text-center mb-4" style="z-index:2; position: relative;">
-		<a href="admin/login_admin.php">
+		<a href="admin/login_admin">
 			<button class="btn btn-admin"><i class="fas fa-user-shield"></i> Administrador</button>
 		</a>
 	</div>

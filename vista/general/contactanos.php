@@ -128,7 +128,7 @@
 <body>
 
   <!-- Botón de regreso -->
-  <button onclick="window.location.href='index.php'" class="btn-back">
+  <button onclick="window.location.href='index'" class="btn-back">
     <i class="fas fa-arrow-left"></i> Volver
   </button>
 
